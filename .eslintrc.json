@@ -1,5 +1,15 @@
 {
   "extends": [
     "@rocketseat/eslint-config/node"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.spec.ts"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
   ]
 }
