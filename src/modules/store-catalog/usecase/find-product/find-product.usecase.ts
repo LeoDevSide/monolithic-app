@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import ProductGateway from '../../gateway/product.gateway'
 import { FindProductInputDto, FindProductOutputDto } from './find-product.dto'
 
