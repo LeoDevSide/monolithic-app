@@ -1,18 +1,18 @@
-import ClientGateway from "../../gateway/client.gateway";
+import ClientGateway from '../../gateway/client.gateway'
 import {
   FindClientInputDto,
   FindClientOutputDto,
-} from "./find-client.usecase.dto";
+} from './find-client.usecase.dto'
 
 export default class FindClientUseCase {
-  private _clientRepository: ClientGateway;
+  private _clientRepository: ClientGateway
 
   constructor(clientRepository: ClientGateway) {
-    this._clientRepository = clientRepository;
+    this._clientRepository = clientRepository
   }
 
   async execute(input: FindClientInputDto): Promise<FindClientOutputDto> {
-    const client = await this._clientRepository.find(input.id);
+    const client = await this._clientRepository.find(input.id)
 
     return {
       id: client.id.id,
@@ -21,6 +21,6 @@ export default class FindClientUseCase {
       address: client.address,
       createdAt: client.createdAt,
       updatedAt: client.updatedAt,
-    };
+    }
   }
 }
