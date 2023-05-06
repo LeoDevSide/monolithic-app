@@ -36,6 +36,7 @@ describe('ClientAdmFacade test', () => {
       id: '1',
       name: 'Client 1',
       email: 'x@x.com',
+      document: '123456789',
       address: 'Address 1',
     }
 
@@ -46,6 +47,7 @@ describe('ClientAdmFacade test', () => {
     expect(client).toBeDefined()
     expect(client.name).toBe(input.name)
     expect(client.email).toBe(input.email)
+    expect(client.document).toBe(input.document)
     expect(client.address).toBe(input.address)
   })
 
@@ -64,6 +66,7 @@ describe('ClientAdmFacade test', () => {
       id: '1',
       name: 'Client 1',
       email: 'x@x.com',
+      document: '123456789',
       address: 'Address 1',
     }
 
@@ -75,6 +78,7 @@ describe('ClientAdmFacade test', () => {
     expect(client.id).toBe(input.id)
     expect(client.name).toBe(input.name)
     expect(client.email).toBe(input.email)
+    expect(client.document).toBe(input.document)
     expect(client.address).toBe(input.address)
   })
 })
